@@ -9,11 +9,11 @@ class Philosopher implements Runnable {
     public void run() {
         while (true) {
             try {
-                System.out.println("Filozof " + id + " thinking");
+                System.out.println("Filozof " + id + " razmislja");
                 Thread.sleep(3000);
-                System.out.println("Filozof " + id + " hungry");
+                System.out.println("Filozof " + id + " je gladan");
                 r.acquire(id);
-                System.out.println("Filozof " + id + " eating");
+                System.out.println("Filozof " + id + " jede");
                 Thread.sleep(4000);
                 r.release(id);
             } catch (InterruptedException e) {
